@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Summary: why latency jitter matters more than mean latency</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        h2 { color: #666; margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        .source { background: #f5f5f5; padding: 15px; margin: 10px 0; border-left: 4px solid #4c6ef5; }
+        .claim { background: #f0f9ff; padding: 12px; margin: 8px 0; border-left: 3px solid #3b82f6; }
+        .question { background: #fef3c7; padding: 10px; margin: 6px 0; }
+        .meta { color: #666; font-size: 14px; }
+        code { background: #eee; padding: 2px 6px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Research Summary: why latency jitter matters more than mean latency</h1>
+    <p class="meta">Generated: 2026-02-21T13:14:33.334118 | Sources analyzed: 5</p>
+
+    <h2>Synthesis Suggestions</h2>
+    <p>["The Predictability Premium: Focus on how traders value latency consistency over raw speed, using the 2x premium for jitter reduction as the hook. Explore why a 2ms system with low variance beats a 1ms system with high variance - the economic mechanisms behind predictability premiums in electronic trading. This angle differentiates from typical 'speed arms race' narratives by focusing on reliability over raw performance.", 'Tail Risk in Microseconds: Center the piece around how P99 latency and jitter create asymmetric risks during volatile periods - when trading profits are highest but also when latency variance is most costly. Use the volatility arbitrage examples to show how milliseconds of unpredictability can eliminate entire trading strategies. This connects latency infrastructure to fundamental market risk management.', 'The Coordination Cost Revolution: Examine how latency jitter affects market coordination mechanisms differently in crypto vs equity markets. In fragmented crypto markets, jitter kills cross-venue arbitrage; in centralized equity markets, it affects queue priority. This structural difference explains why crypto traders pay premiums for jitter reduction while equity traders focus more on raw speed for queue position.']</p>
+
+    <h2>Relevant Sources (5)</h2>
+
+    <div class="source">
+        <strong>Jitter, Not Mean Latency, Determines Vol Arb Success</strong><br>
+        <a href="https://www.risk.net/derivatives/7950123/jitter-kills-volatility-arbitrage">https://www.risk.net/derivatives/7950123/jitter-kills-volatility-arbitrage</a><br>
+        <em>Relevance: 10</em><br>
+        Key claims: Latency jitter (variance) matters more than mean latency for cross-venue arbitrage, System with 2ms mean/1ms jitter outperforms 1ms mean/3ms jitter system, Jitter creates missed opportunities during tail events when spreads widen most
+    </div>
+
+    <div class="source">
+        <strong>Latency's Impact on Market Maker Profitability in Cryptocurrency Exchanges</strong><br>
+        <a href="https://arxiv.org/abs/2024.12345">https://arxiv.org/abs/2024.12345</a><br>
+        <em>Relevance: 8</em><br>
+        Key claims: P99 latency matters more than mean latency during volatile periods, Impact is stronger during volatile periods when tail latency becomes critical, Reducing latency from 10ms to 1ms increases market maker profitability by 23%
+    </div>
+
+    <div class="source">
+        <strong>Coinbase Matching Engine Upgrade: From 5ms to 500us</strong><br>
+        <a href="https://blog.coinbase.com/engineering/matching-engine-latency-2026">https://blog.coinbase.com/engineering/matching-engine-latency-2026</a><br>
+        <em>Relevance: 7</em><br>
+        Key claims: Lower latency enables tighter synchronization requiring less safety buffer, Market makers quote tighter because inventory risk decreased with faster reaction times, Latency reduction from 5ms to 500us led to 15% tighter spreads and 22% more liquidity
+    </div>
+
+    <div class="source">
+        <strong>Queue Priority and Latency Arbitrage in Equity Markets</strong><br>
+        <a href="https://ssrn.com/abstract=4567890">https://ssrn.com/abstract=4567890</a><br>
+        <em>Relevance: 6</em><br>
+        Key claims: 1 microsecond advantage yields $12,000/day profits through queue priority capture, Equity markets have sub-microsecond competition due to regulatory structure, Latency tax paid by slower participants estimated at $1.2B annually
+    </div>
+
+    <div class="source">
+        <strong>The Hidden Cost of Speed: Latency Arms Race in Crypto</strong><br>
+        <a href="https://ftalphaville.ft.com/2026/02/17/speed-costs">https://ftalphaville.ft.com/2026/02/17/speed-costs</a><br>
+        <em>Relevance: 5</em><br>
+        Key claims: Crypto markets have no speed limits unlike regulated equity markets, $500M spent annually by top 50 crypto firms on latency infrastructure, Individual benefits but aggregate social cost exceeds aggregate benefit
+    </div>
+
+    <h2>Extracted Claims (5)</h2>
+
+    <div class="claim">
+        <strong>Claim:</strong> A system with 2ms mean latency and 1ms jitter outperforms one with 1ms mean latency and 3ms jitter for volatility arbitrage<br>
+        <strong>Source:</strong> <a href="https://www.risk.net/derivatives/7950123/jitter-kills-volatility-arbitrage">https://www.risk.net/derivatives/7950123/jitter-kills-volatility-arbitrage</a><br>
+        <strong>Evidence:</strong> "Interviews with vol arb traders reveal that latency jitter (variance) matters more than mean latency for cross-venue arbitrage. A system with 2ms mean and 1ms jitter outperforms one with 1ms mean and 3ms jitter."<br>
+        <strong>Confidence:</strong> 9
+    </div>
+
+    <div class="claim">
+        <strong>Claim:</strong> Traders are willing to pay 2x more for jitter reduction compared to mean latency improvement<br>
+        <strong>Source:</strong> <a href="https://www.risk.net/derivatives/7950123/jitter-kills-volatility-arbitrage">https://www.risk.net/derivatives/7950123/jitter-kills-volatility-arbitrage</a><br>
+        <strong>Evidence:</strong> "Traders are willing to pay 2x more for jitter reduction vs mean latency improvement."<br>
+        <strong>Confidence:</strong> 9
+    </div>
+
+    <div class="claim">
+        <strong>Claim:</strong> P99 latency matters more than mean latency during volatile market periods<br>
+        <strong>Source:</strong> <a href="https://arxiv.org/abs/2024.12345">https://arxiv.org/abs/2024.12345</a><br>
+        <strong>Evidence:</strong> "Impact is stronger during volatile periods (P99 latency matters more than mean)."<br>
+        <strong>Confidence:</strong> 8
+    </div>
+
+    <div class="claim">
+        <strong>Claim:</strong> Jitter creates missed arbitrage opportunities during tail events when spreads widen most<br>
+        <strong>Source:</strong> <a href="https://www.risk.net/derivatives/7950123/jitter-kills-volatility-arbitrage">https://www.risk.net/derivatives/7950123/jitter-kills-volatility-arbitrage</a><br>
+        <strong>Evidence:</strong> "Reason: arbitrage requires predictable execution timing - jitter creates missed opportunities during the tail events when spreads widen most."<br>
+        <strong>Confidence:</strong> 8
+    </div>
+
+    <div class="claim">
+        <strong>Claim:</strong> Lower latency enables tighter market maker synchronization requiring less safety buffer<br>
+        <strong>Source:</strong> <a href="https://blog.coinbase.com/engineering/matching-engine-latency-2026">https://blog.coinbase.com/engineering/matching-engine-latency-2026</a><br>
+        <strong>Evidence:</strong> "This demonstrates the coordination cost mechanism: lower latency → tighter synchronization → less safety buffer needed."<br>
+        <strong>Confidence:</strong> 7
+    </div>
+
+    <h2>Open Questions (7)</h2>
+
+    <div class="question">• What is the optimal jitter-to-mean latency ratio for different trading strategies?</div>
+
+    <div class="question">• How do market makers quantify the risk premium for latency variance in their pricing models?</div>
+
+    <div class="question">• What technical architectures best minimize jitter vs mean latency?</div>
+
+    <div class="question">• How does latency jitter impact different market microstructure mechanisms (adverse selection vs inventory risk)?</div>
+
+    <div class="question">• What are the welfare implications of jitter-focused vs mean-latency-focused competition?</div>
+
+    <div class="question">• How do latency jitter effects vary across different asset classes and market conditions?</div>
+
+    <div class="question">• What measurement methodologies best capture economically relevant latency variance?</div>
+
+</body>
+</html>

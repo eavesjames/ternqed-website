@@ -1,0 +1,110 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">TernQED Research</h1>
+  </header>
+
+  <div class="post-content">
+    <p style="font-size: 1.1em; margin-bottom: 2em;">
+      Research on how reductions in latency create value in electronic markets—from adverse selection
+      and inventory risk to queue priority and information constraints.
+    </p>
+
+    <!-- Latest Research Links (RealClearPolitics style) -->
+    <div style="margin-bottom: 3em;">
+      <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5em; margin-bottom: 1em;">
+        <a href="/feed/latest/" style="color: inherit; text-decoration: none;">Latest Research →</a>
+      </h2>
+
+      {{ $feedPage := .Site.GetPage "/feed/latest" }}
+      {{ if $feedPage }}
+        {{ $content := $feedPage.Content }}
+        {{ $sections := split $content "##" }}
+
+        {{ range first 1 (after 1 $sections) }}
+          {{ $dateSection := . }}
+          {{ $links := split $dateSection "###" }}
+
+          {{ range first 5 (after 1 $links) }}
+            {{ $link := . }}
+            {{ $lines := split $link "\n" }}
+            {{ $titleLine := index $lines 0 }}
+
+            <!-- Extract URL from markdown link [title](url) -->
+            {{ $urlStart := add (strings.Index $titleLine "](") 2 }}
+            {{ $urlEnd := strings.Index $titleLine ")" }}
+            {{ $url := substr $titleLine $urlStart (sub $urlEnd $urlStart) }}
+
+            <!-- Extract title from markdown link -->
+            {{ $titleStart := add (strings.Index $titleLine "[") 1 }}
+            {{ $titleEnd := strings.Index $titleLine "](" }}
+            {{ $title := substr $titleLine $titleStart (sub $titleEnd $titleStart) }}
+
+            <!-- Get annotation (first paragraph after title) -->
+            {{ $annotation := index $lines 2 }}
+
+            <div style="margin-bottom: 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #eee;">
+              <h3 style="margin-bottom: 0.5em; font-size: 1.1em;">
+                <a href="{{ $url }}" target="_blank" rel="noopener">{{ $title }}</a>
+              </h3>
+              <p style="margin: 0; color: #666; font-size: 0.95em;">{{ $annotation }}</p>
+            </div>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <!-- Lab Notes Section -->
+    <div style="margin-bottom: 3em;">
+      <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5em; margin-bottom: 1em;">
+        <a href="/lab/" style="color: inherit; text-decoration: none;">Lab Notes →</a>
+      </h2>
+
+      {{ range first 2 (where .Site.RegularPages "Section" "lab") }}
+        <div style="margin-bottom: 1.5em;">
+          <h3 style="margin-bottom: 0.3em; font-size: 1.1em;">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <p style="margin: 0; color: #666; font-size: 0.9em;">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+          </p>
+        </div>
+      {{ end }}
+    </div>
+
+    <!-- Analysis Section -->
+    <div style="margin-bottom: 3em;">
+      <h2 style="border-bottom: 2px solid #333; padding-bottom: 0.5em; margin-bottom: 1em;">
+        <a href="/posts/" style="color: inherit; text-decoration: none;">Analysis →</a>
+      </h2>
+
+      {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+        <div style="margin-bottom: 1.5em;">
+          <h3 style="margin-bottom: 0.3em; font-size: 1.1em;">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <p style="margin: 0; color: #666; font-size: 0.9em;">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+          </p>
+        </div>
+      {{ end }}
+    </div>
+
+    <!-- About Section -->
+    <div style="margin-top: 3em; padding-top: 2em; border-top: 2px solid #eee;">
+      <h2>About</h2>
+      <p>
+        TernQED is a research collective investigating latency value across electronic markets,
+        high-frequency trading, MEV extraction, and distributed AI training. We combine perspectives
+        from market microstructure, information theory, trading practice, and systems architecture.
+      </p>
+      <p>
+        <a href="/lab/">Lab Notes</a> •
+        <a href="/posts/">Analysis</a> •
+        <a href="/resources/">Resources</a> •
+        <a href="/glossary/">Glossary</a>
+      </p>
+    </div>
+  </div>
+</article>
+{{ end }}

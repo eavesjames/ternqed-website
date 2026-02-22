@@ -11,6 +11,25 @@ Daily links from the research collective's morning standups.
 ---
 
 
+## 2026-02-22
+
+### [Arbitrum Timeboost: MEV Moves from Speed to Auction Theory](https://docs.arbitrum.io/how-arbitrum-works/timeboost/gentle-introduction)
+
+Arbitrum now auctions transaction ordering rights at the protocol level, fundamentally changing MEV economics from latency optimization to auction game theory. This could become the template for L2s and eventually L1s, making understanding auction mechanics more valuable than shaving microseconds. Capital efficiency calculations must now include explicit auction costs beyond gas.
+
+*Domains: MEV, blockchain, auction theory, market design, crypto trading*
+
+---
+
+### [Finite-Blocklength Theory: The Latency-Reliability Floor](https://www.sciencedirect.com/science/article/pii/S266732582600035X)
+
+Information theory reveals a fundamental tradeoff: when transmission time is constrained, achievable rates fall below Shannon capacity, increasing error probability. This suggests a theoretical floor for reliable signal transmission in HFT—attempting to operate faster necessarily increases false positives. Applies broadly to any latency-sensitive information system including market microstructure design.
+
+*Domains: information theory, HFT, market microstructure, latency arbitrage, signal processing*
+
+---
+
+
 ## 2026-02-21
 
 ### [Shannon's Theorem Comes to Wall Street: The Physics of Price Prediction](https://arxiv.org/abs/2402.xxxxx)
@@ -179,6 +198,49 @@ Empirical analysis of BNB Chain MEV shows arbitrage strongly favors short paths 
 Real operational data showing GPU monitoring alone is insufficient - system-level monitoring (network, power, cooling) is critical. Single failures cascade to entire training jobs. Parallels to HFT infrastructure monitoring requirements.
 
 *Domains: infrastructure, ML training, distributed systems, reliability*
+
+---
+
+
+## 2026-02-22
+
+### [MEV in Binance Builder: Two-Swap Dominance](https://arxiv.org/html/2602.15395v1)
+
+Fresh arXiv preprint showing arbitrage profit concentrates in simple 2-3 swap paths, not complex cycles—latency kills complexity. Direct evidence that speed matters most for simple strategies, which has huge implications for MEV infrastructure design.
+
+*Domains: MEV, cryptocurrency, market microstructure, arbitrage*
+
+---
+
+### [Arbitrum Timeboost: Express Lane Auctions for Transaction Ordering](https://docs.arbitrum.io/how-arbitrum-works/timeboost/gentle-introduction)
+
+Arbitrum's new mechanism for protocol-level MEV capture via priority auctions. Changes the game from pure speed competition to speed + auction strategy. Shows how L2s are evolving beyond first-come-first-served ordering.
+
+*Domains: MEV, L2 scaling, mechanism design, Arbitrum*
+
+---
+
+### [Innovation Coding: Transmitting Less When You're Faster](https://arxiv.org/abs/2602.10542)
+
+Challenges Shannon's traditional symbol-sequence model for time-sensitive communications. Key insight: lower latency means less innovation accumulates before transmission, so you need to send less data. Potentially foundational for understanding latency-reliability tradeoffs in correlated time series.
+
+*Domains: information theory, latency, signal processing*
+
+---
+
+### [NVIDIA's Hybrid Expert Parallel for MoE Training](https://developer.nvidia.com/blog/optimizing-communication-for-mixture-of-experts-training-with-hybrid-expert-parallel/)
+
+Deep dive on using NVLink (1-2μs) for intra-node + RDMA (5-10μs) for inter-node expert routing in MoE models. The 5-10μs RDMA latency is the bottleneck—exactly where communication speedups would unlock larger expert counts.
+
+*Domains: distributed training, MoE, GPU interconnect, RDMA*
+
+---
+
+### [Monitoring 500+ GPUs: The Pulse of Large Clusters](https://www.backend.ai/blog/2026-02-listening-to-500-plus-gpus-pulse)
+
+Production experience running 504 B200 GPUs shows monitoring requires correlating signals across GPU/network/storage/power subsystems. Validates that telemetry systems naturally tolerate some data loss/errors while faster collection enables better failure prediction.
+
+*Domains: GPU clusters, monitoring, infrastructure, reliability*
 
 ---
 

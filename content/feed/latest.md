@@ -53,3 +53,46 @@ MLSys paper showing 10ms network latency causes 40% convergence slowdown for lar
 
 ---
 
+
+## 2026-02-21
+
+### [Arbitrum Timeboost: MEV Capture Through Express Lanes](https://docs.arbitrum.io/how-arbitrum-works/timeboost/gentle-introduction)
+
+Arbitrum now auctions off the right to front-run at the protocol level. This fundamentally changes MEV economics on L2s - your latency advantage gets taxed, and you need to model auction dynamics alongside execution speed.
+
+*Domains: MEV, market microstructure, mechanism design, L2 scaling*
+
+---
+
+### [Finite-Blocklength Information Theory: The Math Behind Latency Limits](https://www.sciencedirect.com/science/article/pii/S266732582600035X)
+
+Unlike Shannon's asymptotic capacity theorem, this framework shows the provable penalty for low-latency communication: faster transmission means higher error rates or reduced information rates. No amount of engineering can overcome this mathematical bound.
+
+*Domains: information theory, latency, fundamental limits*
+
+---
+
+### [MEV in Binance Builder: Two and Three-Swap Paths Dominate](https://arxiv.org/html/2602.15395v1)
+
+Empirical data showing that complex multi-hop arbitrage paths aren't used in production because latency exposure and slippage kill profitability. The real MEV game is optimization on constrained, obvious paths - not finding exotic routes.
+
+*Domains: MEV, HFT, market microstructure, empirical analysis*
+
+---
+
+### [Hybrid NVLink-RDMA Communication for MoE Training](https://developer.nvidia.com/blog/optimizing-communication-for-mixture-of-experts-training-with-hybrid-expert-parallel/)
+
+NVIDIA's approach to MoE training uses network-aware scheduling: route latency-sensitive ops through NVLink (~900GB/s, sub-microsecond) and bandwidth-heavy ops through RDMA. Same principle as HFT network topology optimization, different domain.
+
+*Domains: distributed systems, AI infrastructure, network topology, latency optimization*
+
+---
+
+### [The Pulse of 500+ GPUs: Network Metrics Predict Training Failures](https://www.backend.ai/blog/2026-02-listening-to-500-plus-gpus-pulse)
+
+At scale, GPU cluster failures are predicted by interconnect health, not GPU utilization. The B200 generation is so computationally powerful that network becomes the bottleneck - just like what happened in HFT when trading logic got faster than network fabric.
+
+*Domains: distributed systems, AI infrastructure, failure prediction, network monitoring*
+
+---
+

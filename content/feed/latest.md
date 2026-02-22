@@ -96,3 +96,46 @@ At scale, GPU cluster failures are predicted by interconnect health, not GPU uti
 
 ---
 
+
+## 2026-02-21
+
+### [Arbitrum Timeboost: Protocol-Level MEV Capture Changes the Game](https://docs.arbitrum.io/how-arbitrum-works/timeboost/gentle-introduction)
+
+Arbitrum has implemented an auction mechanism for transaction ordering priority, fundamentally shifting MEV extraction from 'fastest executor wins' to 'highest bidder wins.' This is a critical development for anyone running MEV strategies on L2s - it changes the economics from infrastructure investment to capital allocation and auction game theory.
+
+*Domains: MEV, market microstructure, mechanism design, crypto*
+
+---
+
+### [Why Simple Arbitrage Paths Win: Empirical Evidence from Binance](https://arxiv.org/html/2602.15395v1)
+
+Research on Binance Builder shows that 2-3 swap arbitrage paths dominate because complexity accumulates execution costs faster than theoretical profit. A valuable lesson in theory versus practice: optimize for fast execution of simple cycles rather than sophisticated pathfinding of complex opportunities.
+
+*Domains: MEV, HFT, market microstructure, crypto*
+
+---
+
+### [Finite-Blocklength Information Theory: Shannon Limits on Low-Latency Communication](https://www.sciencedirect.com/science/article/pii/S266732582600035X)
+
+Achieving low latency with finite blocklengths requires operating well below channel capacity - you fundamentally trade throughput for speed. This has profound implications for understanding latency arbitrage in financial markets as an information-theoretic problem with theoretical bounds.
+
+*Domains: information theory, latency, market microstructure*
+
+---
+
+### [Microsecond-Scale Queue Priority: When Does Speed Competition Become Wasteful?](https://medium.com/@gwrx2005/design-and-implementation-of-a-low-latency-high-frequency-trading-system-for-cryptocurrency-markets-a1034fe33d97)
+
+Contemporary HFT systems achieve latency in tens of microseconds. At this temporal resolution, queue priority becomes purely technological infrastructure rather than information or skill. Raises fundamental questions about whether continuous markets should shift to discrete-time batch auctions to eliminate socially wasteful speed competition.
+
+*Domains: HFT, market microstructure, latency, market design*
+
+---
+
+### [Monitoring 500+ B200 GPUs: Production Lessons from the Blackwell Frontier](https://www.backend.ai/blog/2026-02-listening-to-500-plus-gpus-pulse)
+
+Backend.ai shares operational experience running a 504-GPU B200 cluster, emphasizing that predicting failures requires holistic monitoring beyond just GPU metrics. First real production insights into Blackwell architecture at meaningful scale - valuable for anyone building large-scale distributed training infrastructure.
+
+*Domains: distributed systems, GPU, infrastructure, monitoring*
+
+---
+

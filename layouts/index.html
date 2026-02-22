@@ -16,42 +16,43 @@
         <a href="/feed/latest/" style="color: inherit; text-decoration: none;">Latest Research →</a>
       </h2>
 
-      {{ $feedPage := .Site.GetPage "/feed/latest" }}
-      {{ if $feedPage }}
-        {{ $content := $feedPage.Content }}
-        {{ $sections := split $content "##" }}
+      <!-- Hardcoded recent links - updated by automation -->
+      <div style="margin-bottom: 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #eee;">
+        <h3 style="margin-bottom: 0.5em; font-size: 1.1em;">
+          <a href="https://arxiv.org/html/2602.15395v1" target="_blank" rel="noopener">MEV in Binance Builder: Two-Swap Dominance</a>
+        </h3>
+        <p style="margin: 0; color: #666; font-size: 0.95em;">Fresh arXiv preprint showing arbitrage profit concentrates in simple 2-3 swap paths, not complex cycles—latency kills complexity.</p>
+      </div>
 
-        {{ range first 1 (after 1 $sections) }}
-          {{ $dateSection := . }}
-          {{ $links := split $dateSection "###" }}
+      <div style="margin-bottom: 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #eee;">
+        <h3 style="margin-bottom: 0.5em; font-size: 1.1em;">
+          <a href="https://docs.arbitrum.io/how-arbitrum-works/timeboost/gentle-introduction" target="_blank" rel="noopener">Arbitrum Timeboost: Express Lane Auctions</a>
+        </h3>
+        <p style="margin: 0; color: #666; font-size: 0.95em;">Arbitrum's new mechanism for protocol-level MEV capture via priority auctions. Changes the game from pure speed competition to speed + auction strategy.</p>
+      </div>
 
-          {{ range first 5 (after 1 $links) }}
-            {{ $link := . }}
-            {{ $lines := split $link "\n" }}
-            {{ $titleLine := index $lines 0 }}
+      <div style="margin-bottom: 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #eee;">
+        <h3 style="margin-bottom: 0.5em; font-size: 1.1em;">
+          <a href="https://arxiv.org/abs/2602.10542" target="_blank" rel="noopener">Innovation Coding: Transmitting Less When You're Faster</a>
+        </h3>
+        <p style="margin: 0; color: #666; font-size: 0.95em;">Key insight: lower latency means less innovation accumulates before transmission, so you need to send less data. Foundational for understanding latency-reliability tradeoffs.</p>
+      </div>
 
-            <!-- Extract URL from markdown link [title](url) -->
-            {{ $urlStart := add (strings.Index $titleLine "](") 2 }}
-            {{ $urlEnd := strings.Index $titleLine ")" }}
-            {{ $url := substr $titleLine $urlStart (sub $urlEnd $urlStart) }}
+      <div style="margin-bottom: 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #eee;">
+        <h3 style="margin-bottom: 0.5em; font-size: 1.1em;">
+          <a href="https://developer.nvidia.com/blog/optimizing-communication-for-mixture-of-experts-training-with-hybrid-expert-parallel/" target="_blank" rel="noopener">NVIDIA's Hybrid Expert Parallel for MoE Training</a>
+        </h3>
+        <p style="margin: 0; color: #666; font-size: 0.95em;">Deep dive on using NVLink (1-2μs) for intra-node + RDMA (5-10μs) for inter-node expert routing. The 5-10μs RDMA latency is the bottleneck.</p>
+      </div>
 
-            <!-- Extract title from markdown link -->
-            {{ $titleStart := add (strings.Index $titleLine "[") 1 }}
-            {{ $titleEnd := strings.Index $titleLine "](" }}
-            {{ $title := substr $titleLine $titleStart (sub $titleEnd $titleStart) }}
+      <div style="margin-bottom: 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #eee;">
+        <h3 style="margin-bottom: 0.5em; font-size: 1.1em;">
+          <a href="https://www.backend.ai/blog/2026-02-listening-to-500-plus-gpus-pulse" target="_blank" rel="noopener">Monitoring 500+ GPUs: The Pulse of Large Clusters</a>
+        </h3>
+        <p style="margin: 0; color: #666; font-size: 0.95em;">Production experience running 504 B200 GPUs shows monitoring requires correlating signals across GPU/network/storage/power subsystems.</p>
+      </div>
 
-            <!-- Get annotation (first paragraph after title) -->
-            {{ $annotation := index $lines 2 }}
-
-            <div style="margin-bottom: 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #eee;">
-              <h3 style="margin-bottom: 0.5em; font-size: 1.1em;">
-                <a href="{{ $url }}" target="_blank" rel="noopener">{{ $title }}</a>
-              </h3>
-              <p style="margin: 0; color: #666; font-size: 0.95em;">{{ $annotation }}</p>
-            </div>
-          {{ end }}
-        {{ end }}
-      {{ end }}
+      <p style="margin-top: 1em;"><a href="/feed/latest/">View all research links →</a></p>
     </div>
 
     <!-- Lab Notes Section -->
@@ -78,15 +79,20 @@
         <a href="/posts/" style="color: inherit; text-decoration: none;">Analysis →</a>
       </h2>
 
-      {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
-        <div style="margin-bottom: 1.5em;">
-          <h3 style="margin-bottom: 0.3em; font-size: 1.1em;">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h3>
-          <p style="margin: 0; color: #666; font-size: 0.9em;">
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
-          </p>
-        </div>
+      {{ $posts := where .Site.RegularPages "Section" "posts" }}
+      {{ if gt (len $posts) 0 }}
+        {{ range first 3 $posts }}
+          <div style="margin-bottom: 1.5em;">
+            <h3 style="margin-bottom: 0.3em; font-size: 1.1em;">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+            <p style="margin: 0; color: #666; font-size: 0.9em;">
+              <time>{{ .Date.Format "January 2, 2006" }}</time>
+            </p>
+          </div>
+        {{ end }}
+      {{ else }}
+        <p style="color: #666; font-style: italic;">In-depth analysis coming soon as research develops.</p>
       {{ end }}
     </div>
 

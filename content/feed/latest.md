@@ -139,3 +139,46 @@ Backend.ai shares operational experience running a 504-GPU B200 cluster, emphasi
 
 ---
 
+
+## 2026-02-21
+
+### [Arbitrum Timeboost: Protocols Capturing MEV Through Priority Auctions](https://docs.arbitrum.io/how-arbitrum-works/timeboost/gentle-introduction)
+
+Fundamental shift in MEV extraction economics - Arbitrum now auctions off transaction ordering rights, changing the game from speed competition to auction bidding. Template for other L2s and possibly L1s. Changes MEV from latency optimization to auction game theory.
+
+*Domains: MEV, blockchain, market design, auction theory*
+
+---
+
+### [Finite-Blocklength Information Theory: The Math Behind Latency-Constrained Communication](https://www.sciencedirect.com/science/article/pii/S266732582600035X)
+
+Shannon's framework assuming infinite blocklength doesn't apply to latency-sensitive systems. This paper shows achievable rates fall below classical capacity when delay is constrained - suggests fundamental limits to HFT signal transmission speed.
+
+*Domains: information theory, HFT, latency, theoretical limits*
+
+---
+
+### [Innovation Coding: Rethinking Information Flow Under Delay Constraints](https://arxiv.org/abs/2602.10542)
+
+Shifts focus from symbol-level fidelity to information-level utility. In markets, participants don't need every price tick - they need the 'innovation' (unexpected movements). Reconciles why markets can be both efficient and exhibit persistent latency arbitrage.
+
+*Domains: information theory, market efficiency, signal processing*
+
+---
+
+### [MEV in Binance Builder: Why 2-3 Hop Arbitrage Paths Dominate](https://arxiv.org/html/2602.15395v1)
+
+Empirical analysis of BNB Chain MEV shows arbitrage strongly favors short paths to minimize slippage and latency exposure. Longer paths accumulate execution risk. Complexity kills in MEV extraction - key insight for arbitrage algorithm design.
+
+*Domains: MEV, arbitrage, DeFi, algorithmic trading*
+
+---
+
+### [Operating 500+ GPU Clusters: Lessons from 63-Node B200 Infrastructure](https://www.backend.ai/blog/2026-02-listening-to-500-plus-gpus-pulse)
+
+Real operational data showing GPU monitoring alone is insufficient - system-level monitoring (network, power, cooling) is critical. Single failures cascade to entire training jobs. Parallels to HFT infrastructure monitoring requirements.
+
+*Domains: infrastructure, ML training, distributed systems, reliability*
+
+---
+

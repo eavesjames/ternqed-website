@@ -49,15 +49,7 @@ buildExpired = false
   showtoc = true
   tocopen = false
 
-  [params.homeInfoParams]
-    Title = "Latency Value Research"
-    Content = """
-How do reductions in latency create value in electronic markets?
-
-This site explores the mechanisms—adverse selection, inventory risk, coordination cost, arbitrage, information asymmetry, and queue priority—through which faster information propagation changes market outcomes.
-
-Grounded in physics, economics, and information theory. Evidence-based. Auditable claims.
-"""
+  # homeInfoParams disabled - using custom layouts/index.html template instead
 
   [[params.socialIcons]]
     name = "rss"

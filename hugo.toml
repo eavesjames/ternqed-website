@@ -83,22 +83,22 @@ Grounded in physics, economics, and information theory. Evidence-based. Auditabl
 # Main menu
 [menu]
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
+    identifier = "lab"
+    name = "Lab Notes"
+    url = "/lab/"
     weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Analysis"
+    url = "/posts/"
+    weight = 20
 
   [[menu.main]]
     identifier = "evergreen"
     name = "Evergreen"
     url = "/evergreen/"
-    weight = 20
-
-  [[menu.main]]
-    identifier = "feed"
-    name = "Feed"
-    url = "/feed/latest/"
-    weight = 25
+    weight = 30
 
   [[menu.main]]
     identifier = "glossary"

@@ -1,7 +1,7 @@
 ---
 title: Why Jitter Matters More Than Mean Latency in Arbitrage
 date: 2026-02-21
-draft: false
+draft: true
 description: Cross-venue arbitrage profitability depends more on latency predictability
   than speed. Jitter creates inventory risk during volatile periods when spreads widen.
 markets:

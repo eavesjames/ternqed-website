@@ -1,7 +1,7 @@
 ---
 title: "The Shannon Limit in Financial Markets: Why Speed Alone Won't Save You"
 date: 2026-02-21
-draft: false
+draft: true
 summary: "New research proves that profitable price prediction beyond 12 ticks ahead is information-theoretically impossible at microsecond timescales. This isn't an engineering challenge—it's fundamental physics, and it explains why top HFT firms invest more in infrastructure than ML models."
 tags: ["information theory", "HFT", "market microstructure", "Shannon limit", "latency"]
 description: "New research proves profitable HFT price prediction beyond 12 ticks is impossible—a Shannon limit that changes high-frequency trading forever. Here's why."

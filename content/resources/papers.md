@@ -12,7 +12,7 @@ Key research papers exploring how latency affects market outcomes.
 
 ## Foundational Papers
 
-### [The High-Frequency Trading Arms Race](https://faculty.chicagobooth.edu/eric.budish/research/HFT-FrequentBatchAuctions.pdf)
+### [The High-Frequency Trading Arms Race](https://conference.nber.org/confer/2013/MDf13/Budish_Cramton_Shim.pdf)
 **Budish, Cramton, Shim (2015)** - Quarterly Journal of Economics
 
 Shows how speed competition creates socially wasteful arms race. Proposes frequent batch auctions as alternative.
@@ -29,16 +29,6 @@ Analysis of May 6, 2010 flash crash. Shows how latency differences amplified vol
 
 **Key finding:** HFT withdrawal during stress → liquidity evaporation
 **Mechanism:** Adverse selection + inventory risk
-
----
-
-### [Latency and Liquidity Risk](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2658091)
-**Brogaard, Hendershott, Riordan (2014)**
-
-Examines relationship between latency and liquidity provision.
-
-**Key finding:** Lower latency → tighter spreads but also faster withdrawal during stress
-**Mechanism:** Inventory risk reduction
 
 ---
 
@@ -66,7 +56,7 @@ Analyzes DEX trading patterns and latency effects.
 
 ## Queue Priority & Market Design
 
-### [The Race for Speed in High-Frequency Trading](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2331613)
+### [Quantifying the High-Frequency Trading "Arms Race"](https://ericbudish.org/wp-content/uploads/2022/02/Quantifying-the-High-Frequency-Trading-Arms-Race.pdf)
 **Aquilina, Budish, O'Neill (2020)**
 
 UK market data showing queue priority races.

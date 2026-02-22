@@ -25,7 +25,7 @@ Functional programming approaches to trading systems.
 
 ## Infrastructure & Networks
 
-### [Beeks Financial Cloud: The Geography of Latency](https://www.beeksfinancialcloud.com/resources/)
+### [Beeks Group: Low-Latency Infrastructure](https://beeksgroup.com/)
 Proximity hosting, network paths, and latency measurement.
 
 ### [McKay Brothers: Millimeter Wave Networks for Trading](https://www.mckay-brothers.com/)
@@ -34,9 +34,6 @@ Microwave and millimeter wave network infrastructure.
 ---
 
 ## Trading Firm Perspectives
-
-### [Hudson River Trading: Engineering Blog](https://www.hudsonrivertrading.com/hrt-blog/)
-Algorithmic trading infrastructure and optimization.
 
 ### [Two Sigma: Technology Papers](https://www.twosigma.com/topic/technology/)
 Quantitative research and engineering insights.

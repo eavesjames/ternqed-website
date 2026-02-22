@@ -28,14 +28,6 @@ Overview of how market structure affects price discovery and liquidity.
 
 ---
 
-## Industry Conferences
-
-### [Trading Show Chicago](https://www.tradingshowchicago.com/)
-Annual conference with talks on trading infrastructure and latency.
-
-### [QuantMinds](https://www.quantmindsconnect.com/)
-Quantitative finance conference including market microstructure sessions.
-
 ---
 
 ## Technical Deep Dives
@@ -47,10 +39,10 @@ Various talks on system design, kernel bypass, FPGA trading, etc.
 
 ## Crypto/DeFi
 
-### [Flashbots: MEV and Latency in DeFi](https://www.youtube.com/c/Flashbots)
+### [Flashbots: MEV and Latency in DeFi](https://www.youtube.com/@Flashbots)
 Research on maximal extractable value and transaction ordering.
 
-### [Paradigm Research: Market Microstructure in DeFi](https://www.paradigm.xyz/talks)
+### [Paradigm Research: Market Microstructure in DeFi](https://www.paradigm.xyz/)
 Applying traditional market structure concepts to crypto.
 
 ---
